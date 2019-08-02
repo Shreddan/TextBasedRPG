@@ -1,7 +1,10 @@
 #pragma once
+#include "Skills.h"
 #include <string>
+#include <vector>
 class Character
 {
+	
 public:
 	Character(std::string &name, int &Life, int &Hunger, int &Level);
 	~Character();
@@ -30,5 +33,7 @@ private:
 	int Hunger;
 	int Level;
 	int Experience;
+	int Class;
+	std::vector<Skills> skills;
 };
 

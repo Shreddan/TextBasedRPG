@@ -14,9 +14,13 @@ Game::~Game()
 {
 }
 
-void Game::CreateChar()
+void Game::CreateChar(std::vector<Character>& characters)
 {
+	std::string name;
+	std::cout << "What is your name?" << std::endl;
+	std::cin >> name;
 
+	characters.emplace_back(name, 30, 25, 1);
 }
 
 void Game::LoadChar()
@@ -40,7 +44,7 @@ void Game::Initialise()
 
 	if (Choice == 1)
 	{
-		CreateChar();
+		CreateChar(characters);
 	}
 	else if (Choice == 2)
 	{
@@ -48,11 +52,11 @@ void Game::Initialise()
 	}
 	else if (Choice == 3)
 	{
-
+		State = Options;
 	}
 	else if (Choice == 4)
 	{
-
+		return;
 	}
 
 }

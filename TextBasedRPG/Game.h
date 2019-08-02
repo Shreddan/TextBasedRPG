@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include <vector>
 #include "Character.h"
 
 class Game
@@ -24,7 +23,7 @@ public:
 	//Functions
 	void Initialise();
 	void Gameloop();
-	void CreateChar();
+	void CreateChar(std::vector<Character>& characters);
 	void LoadChar();
 
 	//Getters
