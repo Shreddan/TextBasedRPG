@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <iomanip>
 #include "Character.h"
 
 class Game
@@ -9,8 +10,6 @@ class Game
 		MainMenu,
 		Playing,
 		Pause,
-		CharacterScreen,
-		Inventory,
 		Options,
 		Gameover
 	};
@@ -20,21 +19,22 @@ public:
 
 	bool Running;
 
-	//Functions
-	void Initialise();
-	void Gameloop();
+	//Startup Functions
+	void Initialise(int& State);
+	void Gameloop(int State);
 	void CreateChar(std::vector<Character>& characters);
 	void LoadChar();
+
+	//Playing Functions
+	void Promptbar(std::vector<Character> characters);
+	void PlayingMenu(int& State);
+	void CharacterScreen();
 
 	//Getters
 	int GetState() { return State; }
 
-	//Setters
-	int SetState(int x) { State = x; }
-
 private:
 	int State;
-	int Choice;
 	std::vector<Character> characters;
-};
+}; 
 

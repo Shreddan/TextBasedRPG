@@ -5,7 +5,8 @@ class Character
 {
 	
 public:
-	Character(std::string &name, int &Life, int &Hunger, int &Level, std::vector<Skills>& skills);
+	Character();
+	Character(std::string name, int MaxLife, int MaxHunger, int Level);
 	~Character();
 
 
@@ -16,7 +17,8 @@ public:
 	int GetHunger() { return Hunger; }
 	int GetLevel() { return Level; }
 	int GetExperience() { return Experience; }
-
+	int GetMaxHunger() { return MaxHunger; }
+	int GetMaxLife() { return MaxLife; }
 
 	//Setters
 	std::string SetName(std::string s) { name = s; }
@@ -25,14 +27,16 @@ public:
 	int SetLevel(int x) { Level = x; }
 	int SetExperience(int x) { Experience = x; }
 
+	std::vector<Skills> skills;
 
 private:
 	std::string name;
+	int MaxLife;
 	int Life;
+	int MaxHunger;
 	int Hunger;
 	int Level;
 	int Experience;
-	int Class;
-	std::vector<Skills> skills;
+	
 };
 
