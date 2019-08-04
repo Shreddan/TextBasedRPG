@@ -1,12 +1,11 @@
 #pragma once
 #include "Skills.h"
-#include <string>
 #include <vector>
 class Character
 {
 	
 public:
-	Character(std::string &name, int &Life, int &Hunger, int &Level);
+	Character(std::string &name, int &Life, int &Hunger, int &Level, std::vector<Skills>& skills);
 	~Character();
 
 
