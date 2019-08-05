@@ -27,7 +27,7 @@ void Game::CreateChar(std::vector<Character>& characters)
 void Game::LoadChar()
 {
 
-}
+} 
 
 void Game::Initialise(int& State)
 {
@@ -80,9 +80,11 @@ void Game::CharacterScreen()
 
 void Game::Promptbar(std::vector<Character> characters)
 {
-	std::cout << "><------------------><\\<>/><------------------><" << std::endl;
+	std::cout << "><---------------------><\\<>/><---------------------><" << std::endl;
+	std::cout << std::endl;
 	std::cout << characters[0].GetName() << " - " << "{ Level : " << characters[0].GetLevel() << " }" << "{ Hp : " << characters[0].GetLife() << "/" << characters[0].GetMaxLife() << " }" << "{ Hunger : " << characters[0].GetHunger() << "/" << characters[0].GetMaxHunger() << " }" << std::endl;
-	std::cout << "><------------------><\\<>/><------------------><" << std::endl;
+	std::cout << std::endl;
+	std::cout << "><---------------------><\\<>/><---------------------><" << std::endl;
 	std::cout << std::endl;
 }
 
