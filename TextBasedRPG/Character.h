@@ -1,6 +1,7 @@
 #pragma once
 #include "Skills.h"
 #include <vector>
+#include <math.h>
 class Character
 {
 	
@@ -19,13 +20,19 @@ public:
 	int GetExperience() { return Experience; }
 	int GetMaxHunger() { return MaxHunger; }
 	int GetMaxLife() { return MaxLife; }
+	int GetExpNext() { return ExpNext; }
+	float GetExponent() { return Exponent; }
 
 	//Setters
-	std::string SetName(std::string s) { name = s; }
-	int SetLife(int x) { Life = x; }
-	int SetHunger(int x) { Hunger = x; }
-	int SetLevel(int x) { Level = x; }
-	int SetExperience(int x) { Experience = x; }
+	void SetName(std::string s) { name = s; }
+	void SetLife(int x) { Life = x; }
+	void SetMaxLife(int x) { MaxLife = x; }
+	void SetMaxHunger(int x) { MaxHunger = x; }
+	void SetHunger(int x) { Hunger = x; }
+	void SetLevel(int x) { Level = x; }
+	void SetExperience(int x) { Experience = x; }
+	void SetExpNext(int x) { ExpNext = x; }
+	
 
 	std::vector<Skills> skills;
 
@@ -37,6 +44,10 @@ private:
 	int Hunger;
 	int Level;
 	int Experience;
+	int ExpNext;
+	float Exponent;
+
+	int BaseDamage;
 	
 };
 

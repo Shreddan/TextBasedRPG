@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <iomanip>
+#include <chrono>
 #include "Character.h"
 
 class Game
@@ -27,8 +28,10 @@ public:
 
 	//Playing Functions
 	void Promptbar(std::vector<Character> characters);
-	void PlayingMenu(int& State);
+	void PlayingMenu(int& State, std::vector<Character>& characters);
 	void CharacterScreen();
+	void UseSkills(std::vector<Character>& characters);
+	void CharLevelUp(std::vector<Character>& characters);
 
 	//Getters
 	int GetState() { return State; }
@@ -36,5 +39,10 @@ public:
 private:
 	int State;
 	std::vector<Character> characters;
+
+	int Logs;
+	int Ore;
+	int Stone;
+
 }; 
 
